@@ -1,0 +1,21 @@
+* cluster_info browser
+** Overview
+   cluster_info_browser is an 100% in-browser web application for
+   viewing =cluster_info= reports.  It uses SproutCore for managing
+   the UI.
+** Setup
+   1) Clone the repository.
+   2) Run bundler.
+      #+BEGIN_SRC shell
+      bundle
+      #+END_SRC
+   3) Start the SproutCore server.
+      #+BEGIN_SRC shell
+      sc-server
+      #+END_SRC
+   4) Open =http://localhost:4020/cluster_info= in your browser.
+
+** TODO
+   + Deploy as self-contained app that can be stored in Riak.
+   + Load a report from Riak via cluster_info WM resource
+   + Save/load historical reports in Riak
