@@ -6,16 +6,16 @@
 ** Setup
    1) Clone the repository.
    2) Run bundler.
-      #+BEGIN_SRC shell
+      ``` shell
       bundle
-      #+END_SRC
+      ```
    3) Start the SproutCore server.
-      #+BEGIN_SRC shell
+      ``` shell
       sc-server
-      #+END_SRC
+      ```
    4) Open =http://localhost:4020/cluster_info= in your browser.
 
-** TODO
+** Future features
    + Deploy as self-contained app that can be stored in Riak.
    + Load a report from Riak via cluster_info WM resource
    + Save/load historical reports in Riak
