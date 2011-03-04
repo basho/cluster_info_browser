@@ -3,16 +3,15 @@
    cluster_info_browser is an 100% in-browser web application for
    viewing =cluster_info= reports.  It uses SproutCore for managing
    the UI.
+** Prerequisites
+   You need:
+   + Ruby 1.9
+   + Rubygems
+   + bundler (=gem install bundler=)
 ** Setup
    1) Clone the repository.
-   2) Run bundler.
-      ``` shell
-      bundle
-      ```
-   3) Start the SproutCore server.
-      ``` shell
-      sc-server
-      ```
+   2) Run =bundle=.
+   3) Start the SproutCore server with =sc-server=.
    4) Open =http://localhost:4020/cluster_info= in your browser.
 
 ** Future features
