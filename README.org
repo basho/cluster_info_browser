@@ -13,8 +13,10 @@
    2) Run =bundle=.
    3) Start the SproutCore server with =sc-server=.
    4) Open =http://localhost:4020/cluster_info= in your browser.
-
 ** Future features
    + Deploy as self-contained app that can be stored in Riak.
    + Load a report from Riak via cluster_info WM resource
    + Save/load historical reports in Riak
+** Screenshots
+   + [[https://img.skitch.com/20110304-ds2pm2e6d2heyemiuxk8fcs22b.png][Single node report]]
+   + [[https://img.skitch.com/20110304-kbj59dk4e9h9i89jmmx6pje218.png][Expanded sub-section]]
