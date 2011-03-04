@@ -1,0 +1,108 @@
+@import "compass/css3";
+@import "fancy-buttons";
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* App CSS */
+body, html {
+  background-color: white;
+  color: #444;
+  padding-bottom: 0.5em;
+}
+
+.sc-view {
+  position: static;
+  display: auto;
+  overflow: visible;  
+}
+
+$width: 960px;
+$border: 1px solid #bbb;
+
+#cluster_info {
+  width: $width;
+  margin: 0.5em auto 1.5em;
+  padding: 1em;
+  background-color: #eee;
+  border: $border;
+  @include box-shadow(#333333, 1px, 1px, 5px, 0, false);
+  h1 { 
+    margin: -0.75em -0.75em 1em;
+    padding: 0.25em 1em;
+    color: white;
+    background-color: #444;
+    text-align: right;
+  }
+  button { 
+     @include fancy-button(#444444, 14px, 6px, 1px);
+  }  
+
+  #paste-report { float: right; width: 200px; }
+
+  #report {
+    margin-right: 210px;
+    ul { padding: 0; margin: 0 }
+    li { padding: 0; margin: 0 }
+    input.check { display: none }
+    h2 { 
+      text-decoration: underline; 
+      margin-bottom: 0.5em 
+    }
+    pre.report-data {
+      display: none;
+      border: $border;
+      background-color: white;
+      padding: 0.5em;
+      overflow: auto;
+      &.expanded {
+          display: block;
+      }
+    }
+  }
+
+  .clearfix { clear: both; }
+}
+

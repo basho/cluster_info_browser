@@ -1,0 +1,28 @@
+<h1>cluster_info browser</h1>
+
+<div id="paste-report">
+  <h2>Paste a report</h2>
+  <textarea></textarea>
+  {{#view "ClusterInfo.pasteReportButtonView"}}
+    <button>Load</button>
+  {{/view}}
+</div>
+
+<div id="report" style="display:none">
+{{#view "ClusterInfo.reportView"}}
+  <h2>Cluster info report for: {{bind "node"}}</h2>
+  {{#collection "ClusterInfo.sectionsView"}}
+    <h3>
+      <label>
+        <input type="checkbox" class="check" /> 
+        {{bind "content.name"}}
+      </label>
+    </h3>
+    {{#view "ClusterInfo.sectionDataView"}}
+    <pre class="report-data">{{bind "content"}}</pre>
+    {{/view}}
+  {{/collection}}
+{{/view}}
+</div>
+
+<div class="clearfix"></div>
