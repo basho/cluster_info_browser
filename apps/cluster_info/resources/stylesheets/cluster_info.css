@@ -80,7 +80,9 @@ $border: 1px solid #bbb;
      @include fancy-button(#444444, 14px, 6px, 1px);
   }  
 
-  #paste-report { float: right; width: 200px; }
+  #rightCol { float: right; width:250px; }
+  #paste-report {  width:250px;}
+  #upload-report {display:none; width:250px;}
 
   #report {
     margin-right: 210px;

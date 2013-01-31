@@ -1,11 +1,20 @@
 <h1>cluster_info browser</h1>
-
+<div id="rightCol">
 <div id="paste-report">
   <h2>Paste a report</h2>
-  <textarea></textarea>
+  <textarea></textarea> 
   {{#view "ClusterInfo.pasteReportButtonView"}}
     <button>Load</button>
   {{/view}}
+</div>
+
+<div id="upload-report">
+  <h2>Upload a report</h2>
+  <input type="file" id="fileInput"></input>
+  {{#view "ClusterInfo.uploadReportButtonView"}}
+    <button>Upload</button>
+  {{/view}}
+</div>
 </div>
 
 <div id="report" style="display:none">

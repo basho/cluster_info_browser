@@ -70,6 +70,31 @@ ClusterInfo.pasteReportButtonView = SC.TemplateView.create({
   }
 });
 
+ClusterInfo.uploadReportButtonView = SC.TemplateView.create({
+  mouseUp: function(){
+    var fileReference = this.$('button').parents('#upload-report').find('input');
+    files = document.getElementById('fileInput').files;
+    if (files.length == 0) { alert("Select a file to read"); return;}
+    file = files[0];
+    var reader = new FileReader();
+    reader.onload = function(e){
+
+		// e.target.result holds the DataURL which
+		// can be used as a source of the image:
+		var textarea = $('#paste-report').find('textarea');
+
+		textarea.val(e.target.result);
+        ClusterInfo.reportListController.addReport(e.target.result);
+	};
+
+	// Reading the file as a DataURL. When finished,
+	// this will trigger the onload function above:
+	reader.readAsText(file);
+
+
+  }
+});
+
 ClusterInfo.reportView = SC.TemplateView.create({
   contentBinding: "ClusterInfo.reportListController*selection.firstObject",
   nodeBinding: "*content.node",
@@ -104,4 +129,15 @@ jQuery(document).ready(function() {
     layerId: 'cluster_info',
     templateName: 'cluster_info'
   });
+  
+  // Check for the various File API support.
+  if (window.File && window.FileReader && window.FileList && window.Blob) {
+  // Great success! All the File APIs are supported.
+    $("#upload-report").show();
+    $("#paste-report").hide();
+
+  } else {
+    $("#upload-report").hide();
+  }
+  
 });
